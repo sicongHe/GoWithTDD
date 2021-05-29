@@ -1,9 +1,12 @@
 package tools
 
+const englishHiPrefix = "hi"
+const englishHelloPrefix = "hello"
+
 func Hi(user string) string {
-	return "hi " + user + "!\n"
+	return englishHiPrefix + " " + user + "!\n"
 }
 
 func Hello() string {
-	return "hello!\n"
+	return englishHelloPrefix + "!\n"
 }
