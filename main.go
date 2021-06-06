@@ -7,6 +7,6 @@ import (
 )
 
 func main() {
-	fmt.Println(tools.Hi("Sicong"))
+	fmt.Println(tools.Hi("Sicong", ""))
 	fmt.Println(tools.Hello())
 }
