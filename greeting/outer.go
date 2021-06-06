@@ -1,4 +1,4 @@
-package tools
+package greeting
 
 const chinese = "Chinese"
 const english = "English"
