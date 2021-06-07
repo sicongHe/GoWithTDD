@@ -22,8 +22,8 @@ func TestHi(t *testing.T) {
 		assertCorrectMessage(t, got, want)
 	})
 	t.Run("say hi in Chinese", func(t *testing.T) {
-		got := Hi("思聪", "Chinese")
-		want := "你好 思聪"
+		got := Hi("sicong", "Chinese")
+		want := "你好 sicong"
 		assertCorrectMessage(t, got, want)
 	})
 
