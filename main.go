@@ -1,13 +1,20 @@
 package main
 
 import (
-	"os"
-	"time"
+	"fmt"
 
-	"github.com/siconghe/hello/coutdown"
+	"github.com/siconghe/hello/concurrency"
 )
 
+func mockWebsitechecker(_ string) bool {
+	return true
+}
 func main() {
-	sleeper := &coutdown.ConfigurableSleeper{Duration: 1 * time.Second}
-	coutdown.Countdown(os.Stdout, sleeper)
+	urls := []string{
+		"www.1.com",
+		"www.2.com",
+		"www.3.com",
+	}
+	got := concurrency.CheckWebsite(mockWebsitechecker, urls)
+	fmt.Printf("%#v", got)
 }
