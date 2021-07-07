@@ -1,12 +1,13 @@
 package main
 
 import (
-	"fmt"
+	"os"
+	"time"
 
-	"github.com/siconghe/hello/greeting"
+	"github.com/siconghe/hello/coutdown"
 )
 
 func main() {
-	fmt.Println(greeting.Hi("Sicong", ""))
-	fmt.Println(greeting.Hello())
+	sleeper := &coutdown.ConfigurableSleeper{Duration: 1 * time.Second}
+	coutdown.Countdown(os.Stdout, sleeper)
 }
